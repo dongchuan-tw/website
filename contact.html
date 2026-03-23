@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="聯絡東川實業有限公司，洽詢品牌代理與合作。" />
+  <title>聯絡我們 | 東川實業有限公司</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="contact-page page-active-blue">
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="index.html" class="logo" aria-label="東川實業首頁">
+        <span class="logo-mark">DC</span>
+        <span class="logo-text">
+          <strong>東川實業</strong>
+          <small>Dong Chuan International Co., Ltd.</small>
+        </span>
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="切換選單" aria-expanded="false" aria-controls="siteNav">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="site-nav" id="siteNav">
+        <a href="index.html">首頁</a>
+        <a href="about.html">關於我們</a>
+        <a href="contact.html" class="active">聯絡我們</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container contact-grid contact-grid-single">
+        <div class="contact-form-wrap contact-form-panel">
+          <div class="section-heading center">
+            <p class="eyebrow">MESSAGE</p>
+            <h2>來訊表單</h2>
+          </div>
+
+          <form id="contactForm" class="contact-form">
+            <label>
+              <span>聯絡人姓名 *</span>
+              <input type="text" name="name" placeholder="請輸入聯絡人姓名" required />
+              <small class="field-error" data-error-for="name" aria-live="polite"></small>
+            </label>
+
+            <label>
+              <span>電子郵件 *</span>
+              <input type="email" name="email" placeholder="name@example.com" required />
+              <small class="field-error" data-error-for="email" aria-live="polite"></small>
+            </label>
+
+            <label>
+              <span>手機或電話</span>
+              <input type="tel" name="phone" placeholder="請輸入手機或電話" />
+            </label>
+
+            <label>
+              <span>合作項目</span>
+              <select name="inquiryType">
+                <option value="經銷商">經銷商</option>
+                <option value="品牌合作">品牌合作</option>
+                <option value="其它">其它</option>
+              </select>
+            </label>
+
+            <label>
+              <span>敘述說明 *</span>
+              <textarea name="message" rows="6" placeholder="請輸入您的合作需求或詢問內容" required></textarea>
+              <small class="field-error" data-error-for="message" aria-live="polite"></small>
+            </label>
+
+            <button type="submit" class="btn btn-dark">Send Message</button>
+            <p class="form-status" id="formStatus" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-cta">
+      <div class="container">
+        <h2 class="contact-cta-title">
+          聯絡我們
+        </h2>
+
+        <a href="mailto:info@dongchuan.tw" class="contact-cta-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M4 6h16v12H4z"></path>
+            <path d="M4 6l8 7 8-7"></path>
+          </svg>
+          <span>
+            info@dongchuan.tw
+          </span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer copyright-bar">
+    <div class="container footer-grid footer-grid-center">
+      <div>
+        <p>Copyrights © 2026 All Rights Reserved by dongchuan</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
