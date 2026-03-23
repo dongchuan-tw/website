@@ -1,5 +1,8 @@
 # Dongchaun GitHub Pages Site
 
+
+
+
 靜態網站檔案，可直接部署到 GitHub Pages。
 
 ## 結構
@@ -22,3 +25,23 @@
 - 聯絡表單目前為靜態版，送出後會以 `mailto:` 開啟使用者的郵件程式。
 - 若要真實收表單，可改接 Formspree、Netlify Forms 或 Google Apps Script。
 - 目前 `Line` 欄位為 placeholder，請改成正式官方帳號。
+
+
+# Release version #
+| Date       |     ETiPets     | Commit Id                                |
+| 2026-03-24 | 1.0.0           | 8d2d3de6535d73a48915a910aa184c1e11cd9e0b |
+
+
+# CHANGE LOG #
+-------------------------------------------------------------------------
+## *2026-03-24：* Dong Chuan Web v1.0.0
+-------------------------------------------------------------------------
+### New Feature
+* 1. none
+
+### Improvement
+* 1. none
+
+### Bug
+* 1. none
+
