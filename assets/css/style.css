@@ -306,39 +306,43 @@ textarea {
   display: flex;
   align-items: center;
   height: 100%;
-  gap: 12px;
+  gap: 48px;
   color: #ffffff;
 }
 
 .logo-mark {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 42px;
-  height: 42px;
-  border: 1px solid #ffffff;
-  font-size: 12px;
-  letter-spacing: 0.18em;
-  color: #ffffff;
+  display: block;
+  width: 76px;
+  height: 76px;
+  flex-shrink: 0;
+  background: transparent;
+  object-fit: contain;
+  object-position: center;
+  transform: scale(1.65);
+  transform-origin: center center;
 }
 
 .logo-text {
   display: flex;
   flex-direction: column;
-  line-height: 1.3;
+  line-height: 1.25;
+  justify-content: center;
+  min-height: 76px;
 }
 
 .logo-text strong {
-  font-size: 20px;
+  font-size: 40px;
   font-weight: 500;
   letter-spacing: 0.06em;
   color: #ffffff;
+  line-height: 1.05;
 }
 
 .logo-text small {
-  font-size: 12px;
+  font-size: 16px;
   letter-spacing: 0.08em;
   color: var(--header-text);
+  line-height: 1.1;
 }
 
 .site-nav {
@@ -838,6 +842,15 @@ textarea {
 }
 
 @media (max-width: 768px) {
+  .nav-wrap {
+    min-height: 96px;
+  }
+
+  .logo-mark {
+    width: 56px;
+    height: 56px;
+  }
+
   .nav-wrap {
     position: relative;
   }
