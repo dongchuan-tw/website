@@ -7,11 +7,13 @@
 
 ## 結構
 - `index.html` 首頁
-- `about.html` 關於我們
-- `contact.html` 聯絡我們
-- `css/style.css` 樣式
-- `js/main.js` 導航與表單互動
-- `img/` 圖片保留資料夾
+- `home/index.html` 首頁副本
+- `about/index.html` 關於我們
+- `contact/index.html` 聯絡我們
+- `assets/css/style.css` 樣式
+- `assets/js/main.js` 導航與表單互動
+- `assets/images/` 圖片資料夾
+- `CNAME` GitHub Pages 自訂網域設定
 
 ## 部署方式
 1. 建立 GitHub repository
@@ -44,4 +46,3 @@
 
 ### Bug
 * 1. none
-
