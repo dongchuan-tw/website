@@ -288,7 +288,7 @@ textarea {
 /* ===== Shared Site Pages ===== */
 .site-header {
   margin-top: 16px;
-  background: var(--header-bg);
+  background: rgba(63, 69, 90, 0.68);
   border-bottom: 1px solid #d4cfd9;
 }
 
@@ -306,32 +306,33 @@ textarea {
   display: flex;
   align-items: center;
   height: 100%;
-  gap: 48px;
+  gap: 40px;
   color: #ffffff;
 }
 
 .logo-mark {
   display: block;
-  width: 76px;
-  height: 76px;
+  width: auto;
+  height: calc(28px * 1.05 + 10px + 12px * 1.1);
+  max-width: 120px;
   flex-shrink: 0;
   background: transparent;
   object-fit: contain;
   object-position: center;
-  transform: scale(1.65);
+  transform: scale(1.08);
   transform-origin: center center;
 }
 
 .logo-text {
   display: flex;
   flex-direction: column;
+  gap: 8px;
   line-height: 1.25;
   justify-content: center;
-  min-height: 76px;
 }
 
 .logo-text strong {
-  font-size: 40px;
+  font-size: 28px;
   font-weight: 500;
   letter-spacing: 0.06em;
   color: #ffffff;
@@ -339,7 +340,7 @@ textarea {
 }
 
 .logo-text small {
-  font-size: 16px;
+  font-size: 12px;
   letter-spacing: 0.08em;
   color: var(--header-text);
   line-height: 1.1;
@@ -349,7 +350,7 @@ textarea {
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;
-  gap: 28px;
+  gap: 24px;
   align-self: flex-end;
   margin-bottom: 6px;
 }
@@ -366,11 +367,11 @@ textarea {
 
 .site-nav a:hover,
 .site-nav a.active {
-  color: #ffffff;
+  color: #f2f5fb;
 }
 
 .page-active-blue .site-nav a.active {
-  color: #69a3ff;
+  color: #264fa6;
   font-weight: 700;
 }
 
@@ -847,8 +848,9 @@ textarea {
   }
 
   .logo-mark {
-    width: 56px;
-    height: 56px;
+    width: auto;
+    height: calc(28px * 1.05 + 10px + 12px * 1.1);
+    max-width: 120px;
   }
 
   .nav-wrap {
