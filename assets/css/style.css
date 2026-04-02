@@ -312,8 +312,8 @@ textarea {
 
 .logo-mark {
   display: block;
-  width: 76px;
-  height: 76px;
+  width: 60px;
+  height: 60px;
   flex-shrink: 0;
   background: transparent;
   object-fit: contain;
@@ -331,7 +331,7 @@ textarea {
 }
 
 .logo-text strong {
-  font-size: 40px;
+  font-size: 28px;
   font-weight: 500;
   letter-spacing: 0.06em;
   color: #ffffff;
@@ -339,7 +339,7 @@ textarea {
 }
 
 .logo-text small {
-  font-size: 16px;
+  font-size: 12px;
   letter-spacing: 0.08em;
   color: var(--header-text);
   line-height: 1.1;
@@ -847,8 +847,8 @@ textarea {
   }
 
   .logo-mark {
-    width: 56px;
-    height: 56px;
+    width: 60px;
+    height: 60px;
   }
 
   .nav-wrap {
