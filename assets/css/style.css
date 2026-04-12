@@ -730,14 +730,6 @@ code {
     0 2px 8px rgba(44, 62, 80, 0.05);
 }
 
-.contact-page .contact-form-panel::before {
-  content: "";
-  position: absolute;
-  inset: 0 0 auto;
-  height: 4px;
-  background: linear-gradient(90deg, var(--primary-light), var(--accent), var(--primary-dark));
-}
-
 .contact-form label {
   display: block;
   margin-bottom: 18px;
