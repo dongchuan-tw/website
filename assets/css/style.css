@@ -565,6 +565,133 @@ code {
   text-align: center;
 }
 
+/* ============================================================
+   Homepage Typography (CIS Text System)
+   ============================================================ */
+.home-page .home-hero-title {
+  font-family: var(--font-serif);
+  font-size: clamp(36px, 6vw, 56px);
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  font-weight: 700;
+}
+
+.home-page .home-hero-copy {
+  font-family: var(--font-sans);
+  font-size: 15px;
+  line-height: 1.8;
+  color: rgba(250, 250, 247, 0.45);
+}
+
+.home-page .section-eyebrow {
+  font-family: var(--font-en);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+}
+
+.home-page .section-heading h2 {
+  font-family: var(--font-serif);
+  font-size: 32px;
+  line-height: 1.35;
+  letter-spacing: -0.01em;
+}
+
+.home-page .section-desc,
+.home-page .home-value-copy {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.home-page .home-value-title {
+  font-family: var(--font-serif);
+  font-size: 22px;
+  line-height: 1.45;
+  letter-spacing: -0.01em;
+  color: var(--accent);
+}
+
+/* ============================================================
+   About Typography (CIS Text System)
+   ============================================================ */
+.about-page .eyebrow {
+  font-family: var(--font-en);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.about-page .section-heading h2,
+.about-page .philosophy-grid h3 {
+  font-family: var(--font-serif);
+  letter-spacing: -0.01em;
+}
+
+.about-page .section-heading h2 {
+  font-size: 32px;
+  line-height: 1.35;
+}
+
+.about-page .lead,
+.about-page .philosophy-grid p {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.about-page .lead {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ============================================================
+   Contact Typography (CIS Text System)
+   ============================================================ */
+.contact-page .eyebrow {
+  font-family: var(--font-en);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.contact-page .section-heading h2 {
+  font-family: var(--font-serif);
+  font-size: 32px;
+  line-height: 1.35;
+  letter-spacing: -0.01em;
+}
+
+.contact-page .contact-form label span {
+  font-family: var(--font-en);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.contact-page .contact-form input,
+.contact-page .contact-form select,
+.contact-page .contact-form textarea {
+  font-family: var(--font-sans);
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.contact-page .contact-form input::placeholder,
+.contact-page .contact-form textarea::placeholder {
+  font-size: 14px;
+}
+
+.contact-page .contact-form .btn-primary,
+.contact-page .form-status {
+  font-family: var(--font-sans);
+}
+
 .tone-block {
   background: var(--surface-soft);
 }
