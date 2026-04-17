@@ -207,3 +207,114 @@ if (galleryTiles.length) {
     }
   });
 }
+
+const brandLogoSections = Array.from(document.querySelectorAll('.home-brand-logos'));
+
+brandLogoSections.forEach((section) => {
+  const track = section.querySelector('.home-brand-logo-grid');
+  const dotsWrap = section.querySelector('.home-brand-logo-dots');
+
+  if (!(track instanceof HTMLElement) || !(dotsWrap instanceof HTMLElement)) {
+    return;
+  }
+
+  const items = Array.from(track.children).filter((item) => item instanceof HTMLElement);
+  if (!items.length) {
+    return;
+  }
+
+  dotsWrap.innerHTML = '';
+
+  const dots = ['第一個', '最後一個'].map((label, index) => {
+    const dot = document.createElement('button');
+    dot.type = 'button';
+    dot.className = 'home-brand-logo-dot';
+    dot.setAttribute('aria-label', `切換到${label} Logo`);
+    dot.addEventListener('click', () => {
+      const maxScroll = Math.max(0, track.scrollWidth - track.clientWidth);
+      const targetLeft = index === 0 ? 0 : maxScroll;
+      track.scrollTo({ left: targetLeft, behavior: 'smooth' });
+    });
+    dotsWrap.appendChild(dot);
+    return dot;
+  });
+
+  const setActiveDot = () => {
+    const maxScroll = Math.max(0, track.scrollWidth - track.clientWidth);
+    const isOverflowing = maxScroll > 1;
+    dotsWrap.style.display = isOverflowing ? '' : 'none';
+
+    if (maxScroll <= 1) {
+      dots.forEach((dot, index) => {
+        dot.classList.toggle('is-active', index === 0);
+      });
+      return;
+    }
+
+    const isAtEnd = track.scrollLeft >= maxScroll / 2;
+    dots.forEach((dot, index) => {
+      if (index === 0) {
+        dot.classList.toggle('is-active', !isAtEnd);
+      } else {
+        dot.classList.toggle('is-active', isAtEnd);
+      }
+    });
+  };
+
+  track.addEventListener('scroll', setActiveDot, { passive: true });
+  window.addEventListener('resize', setActiveDot);
+  setActiveDot();
+
+  let isPointerDown = false;
+  let startX = 0;
+  let startScrollLeft = 0;
+  let moved = false;
+
+  track.addEventListener('pointerdown', (event) => {
+    if (track.scrollWidth <= track.clientWidth) {
+      return;
+    }
+    isPointerDown = true;
+    moved = false;
+    startX = event.clientX;
+    startScrollLeft = track.scrollLeft;
+    track.classList.add('is-dragging');
+    if (typeof track.setPointerCapture === 'function') {
+      track.setPointerCapture(event.pointerId);
+    }
+  });
+
+  track.addEventListener('pointermove', (event) => {
+    if (!isPointerDown) {
+      return;
+    }
+    const deltaX = event.clientX - startX;
+    if (Math.abs(deltaX) > 4) {
+      moved = true;
+    }
+    track.scrollLeft = startScrollLeft - deltaX;
+  });
+
+  const endDrag = () => {
+    if (!isPointerDown) {
+      return;
+    }
+    isPointerDown = false;
+    track.classList.remove('is-dragging');
+  };
+
+  track.addEventListener('pointerup', endDrag);
+  track.addEventListener('pointercancel', endDrag);
+  track.addEventListener('pointerleave', endDrag);
+
+  track.addEventListener(
+    'click',
+    (event) => {
+      if (moved) {
+        event.preventDefault();
+        event.stopPropagation();
+      }
+    },
+    true
+  );
+});
