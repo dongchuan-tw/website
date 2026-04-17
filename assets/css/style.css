@@ -111,9 +111,9 @@ code {
 
 .logo-mark {
   display: block;
-  width: auto;
-  height: calc(28px * 1.05 + 10px + 12px * 1.1);
-  max-width: 120px;
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
   flex-shrink: 0;
   object-fit: contain;
   object-position: center;
@@ -745,6 +745,17 @@ code {
 .contact-grid-single {
   grid-template-columns: 1fr;
   justify-items: center;
+}
+
+.about-intro .lead {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+}
+
+.about-intro .container.narrow {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .contact-page main {
@@ -1456,9 +1467,8 @@ button.btn:hover {
   }
 
   .logo-mark {
-    width: auto;
-    height: calc(28px * 1.05 + 10px + 12px * 1.1);
-    max-width: 120px;
+    width: 48px;
+    height: 48px;
   }
 
   .logo {
@@ -1569,8 +1579,8 @@ button.btn:hover {
   }
 
   .logo-mark {
-    max-width: 96px;
-    height: 52px;
+    width: 44px;
+    height: 44px;
   }
 
   .logo-text strong {
