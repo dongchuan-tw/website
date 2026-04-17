@@ -179,6 +179,18 @@ code {
   box-shadow: 0 0 0 1px rgba(181, 145, 90, 0.12);
 }
 
+.site-nav a.is-disabled,
+.site-nav a[aria-disabled="true"] {
+  pointer-events: none;
+  opacity: 0.42;
+  cursor: default;
+}
+
+.site-nav a.is-disabled::after,
+.site-nav a[aria-disabled="true"]::after {
+  display: none;
+}
+
 .page-active-blue .site-nav a.active {
   color: var(--accent-light);
   font-weight: 700;
