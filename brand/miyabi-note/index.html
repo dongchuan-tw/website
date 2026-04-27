@@ -14,9 +14,9 @@
   <header class="site-header">
     <div class="container nav-wrap">
       <a href="/home/" class="logo" aria-label="東川實業首頁">
-        <img class="logo-mark" src="/assets/images/dc-logo.png" alt="東川實業 logo" style="display:none;" />
+        <img class="logo-mark" src="/assets/images/dongchuan-logo-icon-rounded.png" alt="東川實業 logo" />
         <span class="logo-text">
-          <strong>東川實業</strong>
+          <strong class="">東川實業</strong>
           <small>Dong Chuan International Co., Ltd.</small>
         </span>
       </a>
@@ -25,10 +25,10 @@
         <span></span><span></span><span></span>
       </button>
 
-      <nav class="site-nav" id="siteNav">
-        <a href="/home/">首頁</a>
+      <nav id="siteNav" class="site-nav" aria-label="主選單">
+        <a href="/home/" class="">首頁</a>
         <a href="/about/">關於我們</a>
-        <!-- <a href="/brand/">代理品牌</a>  -->
+        <a href="/brand/" class="active">代理品牌</a>
         <a href="/contact/">聯絡我們</a>
       </nav>
     </div>
@@ -37,7 +37,7 @@
   <main>
     <section class="section lp-hero">
       <div class="container lp-wrap">
-        <h1 class="lp-title">雅織筆記本</h1>
+        <h1 class="lp-title">MIYABI ノート 雅織筆記本</h1>
       </div>
     </section>
 
@@ -81,7 +81,8 @@
       </div>
     </section>
 
-    <section class="section">
+    <!-- TODO: 後續上線銷售通路資訊後，請移除 hidden 以重新顯示此區塊。 -->
+    <section class="section" hidden>
       <div class="container lp-wrap">
         <article class="lp-card">
           <h2>銷售通路</h2>
