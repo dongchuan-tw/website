@@ -891,6 +891,19 @@ code {
   color: var(--primary);
 }
 
+.lp-brand-logo {
+  margin: 0 0 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lp-brand-logo img {
+  width: min(100%, 280px);
+  height: auto;
+  display: block;
+}
+
 .lp-card p,
 .lp-list {
   margin: 0;
